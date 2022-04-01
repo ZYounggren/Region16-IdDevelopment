@@ -3,6 +3,21 @@
 ---
 
 ## **Student Advisor**
+### **Feature:** Create Account
+	As a Student Advisor
+	I want to create an account
+	So that I can sign in
+
+	Scenario: Student Advisor successfully creates account
+		Given the Student Advisor decides to create an account
+		When the Student Advisor enters a valid username and password
+		Then the new Student Advisor account is created
+
+	Scenario: Student Advisor account creation is unsuccessful
+		Given the Student Advisor decides to create an account
+		When the Student Advisor enter an invalid username and/or password
+		Then the Student Advisor is shown an error and asked to try again
+
 ### **Feature:** Sign In
     As a Student Advisor
 	I want to sign-in
@@ -87,6 +102,21 @@
 ---
 
 ## **Speaker**
+### **Feature:** Create Account
+	As a Speaker
+	I want to create an account
+	So that I can sign in
+
+	Scenario: Speaker successfully creates account
+		Given the Speaker decides to create an account
+		When the Speaker enters a valid username and password
+		Then the new Speaker account is created
+
+	Scenario: Speaker account creation is unsuccessful
+		Given the Speaker decides to create an account
+		When the Speaker enter an invalid username and/or password
+		Then the Speaker is shown an error and asked to try again
+
 ### **Feature:** Sign-in
 	As a Speaker
 	I want to sign-in
@@ -171,6 +201,21 @@
 ---
 
 ## **Admin**
+### **Feature:** Create Account
+	As a Admin
+	I want to create an account
+	So that I can sign in
+
+	Scenario: Admin successfully creates account
+		Given the Admin decides to create an account
+		When the Admin enters a valid username and password
+		Then the new Admin account is created
+
+	Scenario: Admin account creation is unsuccessful
+		Given the Admin decides to create an account
+		When the Admin enter an invalid username and/or password
+		Then the Admin is shown an error and asked to try again
+		
 ### **Feature:** Sign in
 	As an Admin
 	I want to sign in
