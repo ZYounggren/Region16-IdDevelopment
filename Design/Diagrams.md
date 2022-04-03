@@ -1,13 +1,13 @@
 # **Diagrams for Project**
 ---
 ## **Domain Object Model**
-![Domain Object Model](/Design/Images/Domain%20object%20modeling.png)
+![Domain Object Model](/Design/Images/Domainobjectmodeling.png)
 
 ---
 ---
 
 ## **Class Diagram**
-![Class Diagram](/Design/Images/Class%20Diagram.png)
+![Class Diagram](/Design/Images/ClassDiagram.png)
 
 ---
 ---
@@ -15,13 +15,13 @@
 ## **Use Case Diagrams**
 
 ### **Student Advisor**
-![Student Advisor Use Case Diagram](/Design/Images/Use%20Case/StudentAdvisorFormSubmitUseCase.png)
+![Student Advisor Use Case Diagram](/Design/Images/UseCase/StudentAdvisorFormSubmitUseCase.png)
 
 ### **Speaker**
-![Speaker Use Case Diagram](/Design/Images/Use%20Case/SpeakerFormSubmitUseCase.png)
+![Speaker Use Case Diagram](/Design/Images/UseCase/SpeakerFormSubmitUseCase.png)
 
 ### **Admin**
-![Admin Use Case Diagram](/Design/Images/Use%20Case/AdminFormManageUseCase.png)
+![Admin Use Case Diagram](/Design/Images/UseCase/AdminFormManageUseCase.png)
 
 ---
 ---
@@ -66,22 +66,22 @@
 ## **State Machine Diagrams**
 
 ### **Student Advisor State**
-![Student Advisor State](/Design/Images/State%20Machine/StudentAdvisorState.jpg)
+![Student Advisor State](/Design/Images/StateMachine/StudentAdvisorState.jpg)
 
 ### **Speaker State**
-![Speaker State](/Design/Images/State%20Machine/SpeakerState.jpg)
+![Speaker State](/Design/Images/StateMachine/SpeakerState.jpg)
 
 ### **Student Advisor Form State**
-![Student Advisor Form State](/Design/Images/State%20Machine/StudentAdvisorFormState.jpg)
+![Student Advisor Form State](/Design/Images/StateMachine/StudentAdvisorFormState.jpg)
 
 ### **Speaker Form State**
-![Speaker Form State](/Design/Images/State%20Machine/SpeakerFormState.jpg)
+![Speaker Form State](/Design/Images/StateMachine/SpeakerFormState.jpg)
 
 ### **Session State**
-![Session State](/Design/Images/State%20Machine/SessionState.jpg)
+![Session State](/Design/Images/StateMachine/SessionState.jpg)
 
 ### **Attendee State**
-![Attendee State](/Design/Images/State%20Machine/AttendeeState.jpg)
+![Attendee State](/Design/Images/StateMachine/AttendeeState.jpg)
 
 ---
 ---
