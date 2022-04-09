@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using webapp.Models;
 
-namespace webapp.Data;
+namespace webapp;
 
 public class ApplicationDbContext : IdentityDbContext
 {
