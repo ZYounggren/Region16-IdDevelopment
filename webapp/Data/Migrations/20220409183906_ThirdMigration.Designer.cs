@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using webapp.Data;
 
@@ -10,9 +11,10 @@ using webapp.Data;
 namespace webapp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220409183906_ThirdMigration")]
+    partial class ThirdMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.1");
@@ -213,97 +215,6 @@ namespace webapp.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("webapp.Models.Attendee", b =>
-                {
-                    b.Property<int>("AttendeeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("EmailAddress")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Ethnicity")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Gender")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Grade")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MailAddress")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PrimaryPhoneNumber")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("SessionId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("AttendeeId");
-
-                    b.HasIndex("SessionId");
-
-                    b.ToTable("Attendees");
-                });
-
-            modelBuilder.Entity("webapp.Models.Session", b =>
-                {
-                    b.Property<int>("SessionId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("SessionDescription")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("SessionTitle")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("SessionId");
-
-                    b.ToTable("Sessions");
-                });
-
-            modelBuilder.Entity("webapp.Models.Speaker", b =>
-                {
-                    b.Property<int>("SpeakerId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("EmailAddress")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("JobTitle")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MailAddress")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PrimaryPhoneNumber")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("SessionId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("SpeakerId");
-
-                    b.HasIndex("SessionId");
-
-                    b.ToTable("Speakers");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -353,29 +264,6 @@ namespace webapp.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("webapp.Models.Attendee", b =>
-                {
-                    b.HasOne("webapp.Models.Session", null)
-                        .WithMany("Attendees")
-                        .HasForeignKey("SessionId");
-                });
-
-            modelBuilder.Entity("webapp.Models.Speaker", b =>
-                {
-                    b.HasOne("webapp.Models.Session", "Session")
-                        .WithMany("Speakers")
-                        .HasForeignKey("SessionId");
-
-                    b.Navigation("Session");
-                });
-
-            modelBuilder.Entity("webapp.Models.Session", b =>
-                {
-                    b.Navigation("Attendees");
-
-                    b.Navigation("Speakers");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using webapp.Data;
 
@@ -10,9 +11,10 @@ using webapp.Data;
 namespace webapp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220409183357_SecondMigration")]
+    partial class SecondMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.1");
@@ -219,13 +221,7 @@ namespace webapp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("EmailAddress")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Ethnicity")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FirstName")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Gender")
@@ -233,15 +229,6 @@ namespace webapp.Data.Migrations
 
                     b.Property<int>("Grade")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MailAddress")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PrimaryPhoneNumber")
-                        .HasColumnType("TEXT");
 
                     b.Property<int?>("SessionId")
                         .HasColumnType("INTEGER");
@@ -276,22 +263,7 @@ namespace webapp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("EmailAddress")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("JobTitle")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("MailAddress")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PrimaryPhoneNumber")
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("SessionId")

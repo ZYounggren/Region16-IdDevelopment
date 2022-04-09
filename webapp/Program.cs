@@ -61,6 +61,15 @@ else
     app.UseHsts();
 }
 
+//Need to change to using migrations later; for now, will manually delete database each time before.
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    context.Database.EnsureCreated();
+}
+
 //app.UseHttpsRedirection();
 app.UseStaticFiles();
 
