@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace domain;
+namespace webapp.Models;
 
 public class Speaker
 {
