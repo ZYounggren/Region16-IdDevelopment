@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 
-namespace domain;
+namespace domain.SessionAggregate;
 
 public class Session
 {
