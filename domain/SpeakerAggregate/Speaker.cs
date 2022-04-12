@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using domain.SessionAggregate;
 
 namespace domain.SpeakerAggregate;
 
