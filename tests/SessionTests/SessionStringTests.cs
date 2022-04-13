@@ -21,3 +21,16 @@ public class SessionStringTest
         Assert.Equal(mockSession.SessionTitle, mockTitle);
     }
 }
+
+public class SessionDescriptionTest1
+{
+    [Fact]
+    public void TestDescriptionEqual()
+    {
+        string mockDescription = null;
+
+        Session mockSession = new Session();
+
+        Assert.Equal(mockSession.SessionDescription, mockDescription);
+    }
+}
