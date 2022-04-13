@@ -30,7 +30,19 @@ public class SessionDescriptionTest1
         string mockDescription = null;
 
         Session mockSession = new Session();
+        mockSession.SessionDescription = null;
 
         Assert.Equal(mockSession.SessionDescription, mockDescription);
+    }
+}
+
+public class test3 
+{
+    [Fact]
+    public void test3a()
+    {
+        //make a new mock session
+        //make a new mock speaker
+        //get speakerid???
     }
 }
